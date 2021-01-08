@@ -1,0 +1,11 @@
+{% extends 'staff/base.html' %}
+
+{% block content %}
+	<h3>{{ object.title }}</h3>
+	<p>{{ object.location }}</p>
+	<p>{{ object.description }}</p>
+
+	<br>	<a href="{% url 'apply' object.id %} "><button class="btn btn-info">Apply</button></a>
+
+
+{% endblock %}

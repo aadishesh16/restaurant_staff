@@ -1,0 +1,14 @@
+{% extends 'staff/base.html' %}
+{% block content %}
+{% if rest %}
+		{% for res in rest %}
+			<p>{{ res.rest_name }} -
+			{{ res.location }}<br>
+			<a href="{% url 'location-update' res.id %}"><button class="btn btn-info">Update</button></a> <a href="{% url 'location-delete' res.id %}"><button class="btn btn-danger" >Delete</button></a>
+		<hr>
+		{% endfor %}
+{% else %}		
+
+{% endif %}
+
+{% endblock %}

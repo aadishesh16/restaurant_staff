@@ -1,0 +1,16 @@
+{% extends "staff/base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content%}
+	<form method="POST">
+		    <legend class="scheduler-border">Restaurant Admin</legend>
+
+		{% csrf_token %}
+			{{ form | crispy }}
+
+		<div class="form-group">
+						<button class="btn btn-outline-info" type="submit">Register</button>
+					</div>
+
+	</form>
+{% endblock %}

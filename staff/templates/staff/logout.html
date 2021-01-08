@@ -1,0 +1,10 @@
+{% extends 'staff/base.html'%}
+
+
+{% block content %}
+		You've been logged out!
+	<div class="form-group">
+				<a href="{% url 'login' %} "><button class="btn btn-outline-info" type="submit">Login</button></a>
+				</div> 		<p> Don't have an account? Contact Admin!</p>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'staff/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+			{{ form| crispy }}
+
+
+			{{ form.errors }}
+
+		<div class="form-group">
+						<button class="btn btn-outline-info" type="submit">Apply</button>
+					</div>
+
+	</form>
+
+{% endblock %}

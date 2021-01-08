@@ -1,0 +1,19 @@
+{% extends 'staff/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+	<form method="POST">
+		{% csrf_token %}
+			{{ form| crispy }}
+
+		<div class="form-group">
+						Are you sure you want to delete?<br>
+						<button class="btn btn-outline-danger" type="submit">Delete</button>
+						<a href="{% url 'adminjobpost' %}"  class="btn btn-outline-info"> Cancel</a>
+					</div>
+
+
+	</form>
+{% endblock %}
